@@ -164,7 +164,7 @@ class Account(MPTTModel):
         order_insertion_by = ["code"]
 
     class Meta:
-        unique_together = (("parent", "code", "type"),)
+        unique_together = (("parent", "code"),)
         verbose_name = _("account")
 
     def __init__(self, *args, **kwargs):
